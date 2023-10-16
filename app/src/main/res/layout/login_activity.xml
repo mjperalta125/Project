@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/profilebkg"
+    android:background="@drawable/pagebkg"
     tools:context=".Login">
 
     <androidx.cardview.widget.CardView
@@ -14,7 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         app:cardCornerRadius="30dp"
-        app:cardElevation="20dp">
+        app:cardElevation="20dp"
+        android:background="@drawable/custom_edittext">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,14 +34,14 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/login_username"
+                android:id="@+id/login_email"
                 android:background="@drawable/custom_edittext"
                 android:layout_marginTop="40dp"
                 android:padding="8dp"
-                android:hint="Username"
-                android:drawableLeft="@drawable/person_pin"
+                android:hint="Email"
+                android:drawableLeft="@drawable/email_icon"
                 android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/white"/>
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -52,26 +53,48 @@
                 android:inputType="textPassword"
                 android:drawableLeft="@drawable/password_icon"
                 android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/white"/>
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:text="Login"
                 android:id="@+id/login_button"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_button_background"
+                android:layout_gravity="center"
+                android:text="Login"
                 android:textSize="18sp"
-                android:layout_marginTop="30dp"
-                android:backgroundTint="@color/purple"
-                app:cornerRadius = "20dp"/>
-            <TextView
+                app:cornerRadius="20dp" />
+
+            <ProgressBar
+                android:id="@+id/login_progress_bar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/signupRedirectText"
-                android:text="Not yet registered? Sign Up"
-                android:layout_gravity="center"
-                android:padding="8dp"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/purple"
-                android:textSize="18sp"/>
+                android:visibility="gone"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not yet Registere?"
+                    android:layout_gravity="center"
+                    android:textColor="@color/purple"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/signupRedirectText"
+                    android:text="Sign up"
+                    android:layout_gravity="center"
+                    android:padding="8dp"
+                    android:textColor="@color/red"
+                    android:textSize="18sp"/>
+            </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
